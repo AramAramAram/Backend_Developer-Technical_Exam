@@ -10,6 +10,6 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 public class ClientConfig extends ElasticsearchConfiguration {
     @Override
     public ClientConfiguration clientConfiguration() {
-        return ClientConfiguration.builder().connectedTo("localhost:9200").build();
+        return ClientConfiguration.builder().connectedTo("localhost:9200").withBasicAuth("elastic", "0OPP2wCc3EvOzdUw7kPF").build();
     }
 }

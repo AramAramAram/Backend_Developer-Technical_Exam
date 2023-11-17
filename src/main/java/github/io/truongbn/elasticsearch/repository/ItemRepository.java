@@ -7,9 +7,13 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 import github.io.truongbn.elasticsearch.model.Item;
 
 public interface ItemRepository extends ElasticsearchRepository<Item, Integer> {
+    Item findById(int id);
+
     List<Item> findByName(String name);
 
     List<Item> findByCategory(String category);
 
     List<Item> findByPriceBetween(double low, double high);
+
+//    Item saveToIndex(Item item);
 }
